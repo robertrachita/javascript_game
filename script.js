@@ -911,10 +911,12 @@ function colCheck(shapeA, shapeB) {
 
 window.addEventListener("load", function() {
     update();
+    $('.TimeCondition').text("The time has run out: " + timeLeft);
 });
 
 document.body.addEventListener("keydown", function(e) {
     keys[e.keyCode] = true;
+    $('.keydown').ready(this.addEventListener);
 });
 
 document.body.addEventListener("keyup", function(e) {
